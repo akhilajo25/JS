@@ -173,7 +173,11 @@
 // - Maintaining state in async world
 // - setTImeOuts
 // - iterators
+// - data hiding and encapsulation
 // ..... many more
+
+// disadvantages of closures
+// 1. Memory leaks -- can freeze browser
 
 // // Example for closure
 
@@ -248,7 +252,6 @@
 // third();
 
 /* ------Interview Question - Closures----*/
-
 // // 1. What is the output of the following code?
 // function a() {
 //   var i = 1;
@@ -312,5 +315,75 @@
 // // O/P: 0,1,2,3,4,5 is printed because let is block scoped
 
 /* ------Crazy JS Interview Questions----*/
+// // 1. Garbage Collector is a program that frees memory occupied by unused variables
 
+// // 2. How are garbage collectors related to closures?
 
+/* ------First Class Functions----*/
+// // 1. What is an anonymous function?
+// // Anonymous function is a function without a name, anonymus functions are used when functions are used as value
+// const a = function () {
+//   console.log("Hello World");
+// };
+
+// // 2. What is a first class functions?
+// // The ability to use functions as values is called first class functions
+// Ex. 1
+function a(param) {
+  console.log(param);
+}
+
+a(function () {
+  console.log("Passing a function as a argument");
+});
+
+// Ex. 2
+
+function a() {
+  return function () {
+    console.log("returning a function");
+  };
+}
+console.log(a());
+
+// // 3. What is a named function expression?
+// var a = function xyz() {
+//   console.log("Hello World");
+// };
+// a();  // works fine
+// xyz();  // will throw error because xyx is not defined
+
+/* What is a difference between fucntion expression and fucntion statement?
+The difference is hoisting, if you call 
+b(); // will throw error because b is not a function as of now there is stored in b during memory allocation phase
+a();
+
+4. What is a fucntion expression?
+var b = function () {
+  console.log("Hello World");
+};
+b();
+
+4. What is a function statement?
+function a() {
+  console.log("Hello World");
+}
+a();
+*/
+
+// // 5. What is a fucntion declaration?
+// // function declaration is same as function statement
+
+// // 6. What is a fucntion parameter?
+// // function parameter is a variable that is recieved by the function (a, b)
+
+// // 7. What is a fucntion argument?
+// // function argument is a variable that is passed to a function (1,2)
+
+// function addition(a, b) {
+//     return a + b;
+//   };
+
+//   addition(1,2)
+
+/* ------CallBack functions in JS----*/
