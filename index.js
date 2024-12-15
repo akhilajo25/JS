@@ -1,3 +1,4 @@
+
 /*------Temporal Dead zone----*/
 // // 1. index.js:2 Uncaught ReferenceError: Cannot access 'a' before initialization
 // console.log(a);
